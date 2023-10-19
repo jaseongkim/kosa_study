@@ -26,11 +26,5 @@ public class 배열 {
 		strArray2 = new String[] {"안녕","잘가"};
 		System.out.println(strArray1[0]);
 		
-		
-	
-		
-		
-		
-		
 	}
 }
