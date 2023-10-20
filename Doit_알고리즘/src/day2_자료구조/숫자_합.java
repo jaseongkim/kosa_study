@@ -11,6 +11,7 @@ public class 숫자_합 {
  
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
 		br.readLine();	// N 은 쓸모가 없으므로 입력만 받는다.
 		
 		int sum = 0;
