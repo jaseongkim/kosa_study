@@ -1,4 +1,4 @@
-package day_3_자료구조;
+package day3_자료구조;
 
 import java.io.BufferedReader;
 import java.io.IOException;
