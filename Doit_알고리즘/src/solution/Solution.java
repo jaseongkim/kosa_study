@@ -1,24 +1,31 @@
 package solution;
 
 public class Solution {
-	public static String solution(String myString) {
-        String answer = "";
-        
-        for(int q=0; q<myString.length(); q++){
-        	if(myString.charAt(q) < 'l') {
-        		myString = myString.replace(myString.charAt(q), 'l');
-        	}
-        }
-        
-        answer = myString;
-        
-        return answer;
-    }
+	public static int solution(String binomial) {
+		int answer = 0;
+
+		String[] str = binomial.split(" ");
+
+		int aNum = Integer.parseInt(str[0]);
+
+		int bNum = Integer.parseInt(str[2]);
+
+		String op = str[1];
+		
+		if(op.equals("+")) {
+			answer = aNum + bNum;
+		} else if(op.equals("-")) {
+			answer = aNum + bNum;
+		} else if(op.equals("*")) {
+			answer = aNum * bNum;
+		} 
+		
+		return answer;
+	}
 
 	public static void main(String[] args) {
 
-		String str = "abcdevwxyz";
-//		solution(str);
+		String str = "43 + 12";
 		System.out.println(solution(str));
 	}
 }
