@@ -1,31 +1,38 @@
 package solution;
 
 public class Solution {
-	public static int solution(String binomial) {
-		int answer = 0;
+	public static String[] solution(String[] strArr) {
+		String[] answer = {};
 
-		String[] str = binomial.split(" ");
-
-		int aNum = Integer.parseInt(str[0]);
-
-		int bNum = Integer.parseInt(str[2]);
-
-		String op = str[1];
+		int cnt = 0;
+		for (int i = 0; i < strArr.length; i++) {
+			if (!strArr[i].contains("ad")) {
+				cnt++;
+			}
+		}
 		
-		if(op.equals("+")) {
-			answer = aNum + bNum;
-		} else if(op.equals("-")) {
-			answer = aNum + bNum;
-		} else if(op.equals("*")) {
-			answer = aNum * bNum;
-		} 
+		answer = new String[cnt];
 		
+		for (int i = 0,j = 0; i < strArr.length; i++, j++) {
+			if(strArr[i].contains("ad")) {
+				j--;
+				continue;
+			}
+			answer[j]=strArr[i];	
+		}
+		
+		for (int i = 0; i < answer.length; i++) {
+			System.out.println(answer[i]);
+		}
+		
+
+
 		return answer;
 	}
 
 	public static void main(String[] args) {
 
-		String str = "43 + 12";
+		String[] str = { "and","notad","abcd" };
 		System.out.println(solution(str));
 	}
 }
